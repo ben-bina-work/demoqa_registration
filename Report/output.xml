@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180515 14:04:05.870" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<suite source="C:\Ben\demoqa_registration\Test Cases" id="s1" name="Test Cases">
+<suite source="C:\Ben\demoqa_registration\Test Cases\Registraition.robot" id="s1-s1" name="Registraition">
+<test id="s1-s1-t1" name="Join DemoQA">
+<kw name="Given user opens the website" library="Registrations_Actions">
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180515 14:04:06.198" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20180515 14:04:18.185" starttime="20180515 14:04:06.198"></status>
+</kw>
+<kw name="Maximize Browser Window" library="ExtendedSelenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180515 14:04:19.413" starttime="20180515 14:04:18.185"></status>
+</kw>
+<kw name="Go To" library="ExtendedSelenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${prod_url}</arg>
+</arguments>
+<msg timestamp="20180515 14:04:19.413" level="INFO">Opening url 'http://demoqa.com/registration/'</msg>
+<status status="PASS" endtime="20180515 14:04:23.332" starttime="20180515 14:04:19.413"></status>
+</kw>
+<status status="PASS" endtime="20180515 14:04:23.332" starttime="20180515 14:04:06.198"></status>
+</kw>
+<kw name="When user enters details" library="Registrations_Actions">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+<arg>[STRING]</arg>
+</arguments>
+<assign>
+<var>${tmp}</var>
+</assign>
+<msg timestamp="20180515 14:04:23.335" level="INFO">${tmp} = GIN][]T[</msg>
+<status status="PASS" endtime="20180515 14:04:23.335" starttime="20180515 14:04:23.334"></status>
+</kw>
+<kw name="Send and Validate Name" library="RegistrationKeywords">
+<arguments>
+<arg>Ben</arg>
+<arg>${tmp}</arg>
+</arguments>
+<kw name="Element Should Not Be Visible" library="ExtendedSelenium2Library">
+<doc>Verifies that the element identified by `locator` is NOT visible.</doc>
+<arguments>
+<arg>${requiredValidationMessage}</arg>
+</arguments>
+<msg timestamp="20180515 14:04:23.336" level="INFO">Verifying element 'xpath=//*[contains(text(),'* This field is required')]' is not visible.</msg>
+<status status="PASS" endtime="20180515 14:04:23.401" starttime="20180515 14:04:23.336"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${txtFirstName}</arg>
+</arguments>
+<msg timestamp="20180515 14:04:23.401" level="INFO">Clicking element 'id=name_3_firstname'.</msg>
+<status status="PASS" endtime="20180515 14:04:23.994" starttime="20180515 14:04:23.401"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${txtLastName}</arg>
+</arguments>
+<msg timestamp="20180515 14:04:23.995" level="INFO">Clicking element 'id=name_3_lastname'.</msg>
+<status status="PASS" endtime="20180515 14:04:24.571" starttime="20180515 14:04:23.994"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${requiredValidationMessage}</arg>
+</arguments>
+<status status="PASS" endtime="20180515 14:04:24.580" starttime="20180515 14:04:24.571"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txtFirstName}</arg>
+<arg>${firstName}</arg>
+</arguments>
+<msg timestamp="20180515 14:04:24.580" level="INFO">Typing text 'Ben' into text field 'id=name_3_firstname'</msg>
+<status status="PASS" endtime="20180515 14:04:24.877" starttime="20180515 14:04:24.580"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${txtLastName}</arg>
+</arguments>
+<msg timestamp="20180515 14:04:24.878" level="INFO">Clicking element 'id=name_3_lastname'.</msg>
+<status status="PASS" endtime="20180515 14:04:25.487" starttime="20180515 14:04:24.877"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${txtFirstName}</arg>
+</arguments>
+<msg timestamp="20180515 14:04:25.488" level="INFO">Clicking element 'id=name_3_firstname'.</msg>
+<status status="PASS" endtime="20180515 14:04:26.057" starttime="20180515 14:04:25.488"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${txtLastName}</arg>
+</arguments>
+<msg timestamp="20180515 14:04:26.058" level="INFO">Clicking element 'id=name_3_lastname'.</msg>
+<status status="PASS" endtime="20180515 14:04:26.653" starttime="20180515 14:04:26.057"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txtLastName}</arg>
+<arg>${lastName}</arg>
+</arguments>
+<msg timestamp="20180515 14:04:26.653" level="INFO">Typing text 'GIN][]T[' into text field 'id=name_3_lastname'</msg>
+<status status="PASS" endtime="20180515 14:04:26.804" starttime="20180515 14:04:26.653"></status>
+</kw>
+<status status="PASS" endtime="20180515 14:04:26.804" starttime="20180515 14:04:23.335"></status>
+</kw>
+<status status="PASS" endtime="20180515 14:04:26.804" starttime="20180515 14:04:23.333"></status>
+</kw>
+<status status="PASS" endtime="20180515 14:04:26.805" critical="yes" starttime="20180515 14:04:06.198"></status>
+</test>
+<status status="PASS" endtime="20180515 14:04:26.810" starttime="20180515 14:04:05.901"></status>
+</suite>
+<status status="PASS" endtime="20180515 14:04:26.813" starttime="20180515 14:04:05.870"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test Cases" pass="1">Test Cases</stat>
+<stat fail="0" id="s1-s1" name="Registraition" pass="1">Test Cases.Registraition</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
