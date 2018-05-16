@@ -12,8 +12,16 @@ Send and Validate Name
     Input Text    ${txtFirstName}    ${firstName}
     Click Element    ${txtLastName}
     Click Element    ${txtFirstName}
-    #${valid}=    Run Keyword And Return    Page Should Contain Element    ${requiredValidationMessage}
-    #Log    ${valid}
-    #Run Keyword If    '${valid}'=='PASS'    Input Text    ${txtLastName}    tmp
+    ${valid}=    Run Keyword And Return Status    Page Should Contain Element    ${requiredValidationMessage}
+    Log    ${valid}
+    Run Keyword If    ${valid}    Input Text    ${txtLastName}    ${lastName}
     Click Element    ${txtLastName}
-    Input Text    ${txtLastName}    ${lastName}
+
+Send and Validate Marital Status
+    [Arguments]    ${text}    ${numberOfOptions}
+    Log    ${optionValue}
+    ${optionValue}=    Set Variable    ${text}
+    Log    ${optionValue}
+    ${radioCount}    Get Matching Xpath Count    ${radioButtons}
+    Should Be True    ${radioCount}    ${numberOfOptions}
+    Click Element    //input[@value='${optionValue}']

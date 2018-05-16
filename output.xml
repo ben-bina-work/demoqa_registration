@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180515 13:24:25.617" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<suite source="C:\Ben\Robot1\Test Cases" id="s1" name="Test Cases">
+<suite source="C:\Ben\Robot1\Test Cases\Registraition.robot" id="s1-s1" name="Registraition">
+<test id="s1-s1-t1" name="Join DemoQA">
+<kw name="Given user opens the website" library="Registrations_Actions">
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180515 13:24:25.973" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20180515 13:24:31.411" starttime="20180515 13:24:25.973"></status>
+</kw>
+<kw name="Maximize Browser Window" library="ExtendedSelenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180515 13:24:32.620" starttime="20180515 13:24:31.411"></status>
+</kw>
+<kw name="Go To" library="ExtendedSelenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${prod_url}</arg>
+</arguments>
+<msg timestamp="20180515 13:24:32.620" level="INFO">Opening url 'http://demoqa.com/registration/'</msg>
+<status status="PASS" endtime="20180515 13:24:36.450" starttime="20180515 13:24:32.620"></status>
+</kw>
+<status status="PASS" endtime="20180515 13:24:36.451" starttime="20180515 13:24:25.973"></status>
+</kw>
+<kw name="When user enters details" library="Registrations_Actions">
+<kw name="Send and Validate Name" library="RegistrationKeywords">
+<arguments>
+<arg>Ben</arg>
+<arg>Generate Random String</arg>
+</arguments>
+<kw name="Element Should Not Be Visible" library="ExtendedSelenium2Library">
+<doc>Verifies that the element identified by `locator` is NOT visible.</doc>
+<arguments>
+<arg>${requiredValidationMessage}</arg>
+</arguments>
+<msg timestamp="20180515 13:24:36.453" level="INFO">Verifying element 'xpath=//*[contains(text(),'* This field is required')]' is not visible.</msg>
+<status status="PASS" endtime="20180515 13:24:36.489" starttime="20180515 13:24:36.453"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${txtFirstName}</arg>
+</arguments>
+<msg timestamp="20180515 13:24:36.489" level="INFO">Clicking element 'id=name_3_firstname'.</msg>
+<status status="PASS" endtime="20180515 13:24:37.151" starttime="20180515 13:24:36.489"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${txtLastName}</arg>
+</arguments>
+<msg timestamp="20180515 13:24:37.152" level="INFO">Clicking element 'id=name_3_lastname'.</msg>
+<status status="PASS" endtime="20180515 13:24:37.745" starttime="20180515 13:24:37.152"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${requiredValidationMessage}</arg>
+</arguments>
+<status status="PASS" endtime="20180515 13:24:37.755" starttime="20180515 13:24:37.745"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${txtFirstName}</arg>
+<arg>${firstName}</arg>
+</arguments>
+<msg timestamp="20180515 13:24:37.756" level="INFO">Typing text 'Ben' into text field 'id=name_3_firstname'</msg>
+<status status="PASS" endtime="20180515 13:24:37.891" starttime="20180515 13:24:37.756"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${txtLastName}</arg>
+</arguments>
+<msg timestamp="20180515 13:24:37.892" level="INFO">Clicking element 'id=name_3_lastname'.</msg>
+<status status="PASS" endtime="20180515 13:24:38.538" starttime="20180515 13:24:37.892"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${txtFirstName}</arg>
+</arguments>
+<msg timestamp="20180515 13:24:38.539" level="INFO">Clicking element 'id=name_3_firstname'.</msg>
+<status status="PASS" endtime="20180515 13:24:39.136" starttime="20180515 13:24:38.538"></status>
+</kw>
+<kw name="Run Keyword And Return" library="BuiltIn">
+<doc>Runs the specified keyword and returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${requiredValidationMessage}</arg>
+</arguments>
+<assign>
+<var>${valid}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${requiredValidationMessage}</arg>
+</arguments>
+<status status="PASS" endtime="20180515 13:24:39.146" starttime="20180515 13:24:39.136"></status>
+</kw>
+<msg timestamp="20180515 13:24:39.147" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20180515 13:24:39.147" starttime="20180515 13:24:39.136"></status>
+</kw>
+<status status="PASS" endtime="20180515 13:24:39.147" starttime="20180515 13:24:36.452"></status>
+</kw>
+<status status="PASS" endtime="20180515 13:24:39.148" starttime="20180515 13:24:36.452"></status>
+</kw>
+<status status="PASS" endtime="20180515 13:24:39.148" critical="yes" starttime="20180515 13:24:25.973"></status>
+</test>
+<status status="PASS" endtime="20180515 13:24:39.152" starttime="20180515 13:24:25.633"></status>
+</suite>
+<status status="PASS" endtime="20180515 13:24:39.155" starttime="20180515 13:24:25.617"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test Cases" pass="1">Test Cases</stat>
+<stat fail="0" id="s1-s1" name="Registraition" pass="1">Test Cases.Registraition</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

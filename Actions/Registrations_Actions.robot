@@ -12,6 +12,7 @@ user opens the website
 When user enters details
     ${tmp}=    Generate Random String    8    [STRING]
     Send and Validate Name    Ben    ${tmp}
+    Send and Validate Marital Status    married    3
 
 Then join successful
     Log    To be Implemented
