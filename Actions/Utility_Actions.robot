@@ -51,13 +51,13 @@ Write json result to a file
     Create File  ${EXECDIR}/file_with_variable.json  ${json_string}
 
 Read Posts
-    ${posts}=   Get Binary File    ${EXECDIR}/posts.json   
+    ${posts}=   Get Binary File    ${EXECDIR}/Test Cases/Utillity/posts.json   
     ${object}=  Evaluate  json.loads('''${posts}''',strict=False)   json
     ${item}=    Get From List   ${object}      ${0}
     ${title} =  Get From Dictionary  ${item}  title
     Log To Console      ${title}
 Read Photos
-    ${posts}=   Get Binary File    ${EXECDIR}/photos.json   
+    ${posts}=   Get Binary File    ${EXECDIR}/Test Cases/Utillity/photos.json   
     ${object}=  Evaluate  json.loads('''${posts}''',strict=False)   json
     ${item}=    Get From List   ${object}      ${0}
     ${title} =  Get From Dictionary  ${item}  url
