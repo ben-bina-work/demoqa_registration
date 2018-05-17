@@ -50,8 +50,18 @@ Write json result to a file
     [Arguments]     ${json_string}
     Create File  ${EXECDIR}/file_with_variable.json  ${json_string}
 
-
-
+Read Posts
+    ${posts}=   Get Binary File    ${EXECDIR}/posts.json   
+    ${object}=  Evaluate  json.loads('''${posts}''',strict=False)   json
+    ${item}=    Get From List   ${object}      ${0}
+    ${title} =  Get From Dictionary  ${item}  title
+    Log To Console      ${title}
+Read Photos
+    ${posts}=   Get Binary File    ${EXECDIR}/photos.json   
+    ${object}=  Evaluate  json.loads('''${posts}''',strict=False)   json
+    ${item}=    Get From List   ${object}      ${0}
+    ${title} =  Get From Dictionary  ${item}  url
+    Log To Console      ${title}
 
 Open API Endpoint
     Open Browser    about:blank    chrome
@@ -64,9 +74,13 @@ Send Request
     Log To Console  Status Code: ${result.status_code}    
     Close Browser
     ${json_string} =  Set Variable   ${result.json()}
-   
+    
    Write json result to a file     ${json_string}     
 
    
+Show Status
+    [Arguments]     ${role}
+    Log To Console      Role Selection Test Case
+    ${Status}=    Run Keyword If    '${role}'== 'Admin'    Set Variable    <Yes>  ELSE  Set Variable  <No>
 
-
+    [Return]        ${Status}

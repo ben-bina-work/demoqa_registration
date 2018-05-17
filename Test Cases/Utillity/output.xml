@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180517 14:34:29.302" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<robot generated="20180517 14:38:57.341" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
 <suite source="C:\Ben\demoqa_registration\Test Cases\Utillity\RestWebservices.robot" id="s1" name="RestWebservices">
 <test id="s1-t1" name="Read Rest API">
 <kw name="Read Users From API" library="Utility_actions">
@@ -11,8 +11,8 @@
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.731" level="INFO">${result} = &lt;Response [200]&gt;</msg>
-<status status="PASS" endtime="20180517 14:34:31.731" starttime="20180517 14:34:29.725"></status>
+<msg timestamp="20180517 14:38:59.507" level="INFO">${result} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180517 14:38:59.508" starttime="20180517 14:38:57.750"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -20,22 +20,22 @@
 <arg>${result.status_code}</arg>
 <arg>${200}</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.733" starttime="20180517 14:34:31.732"></status>
+<status status="PASS" endtime="20180517 14:38:59.510" starttime="20180517 14:38:59.508"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Status Code: ${result.status_code}</arg>
 </arguments>
-<msg timestamp="20180517 14:34:31.734" level="INFO">Status Code: 200</msg>
-<status status="PASS" endtime="20180517 14:34:31.734" starttime="20180517 14:34:31.733"></status>
+<msg timestamp="20180517 14:38:59.512" level="INFO">Status Code: 200</msg>
+<status status="PASS" endtime="20180517 14:38:59.512" starttime="20180517 14:38:59.510"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>Status Code: ${result.status_code}</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.735" starttime="20180517 14:34:31.734"></status>
+<status status="PASS" endtime="20180517 14:38:59.513" starttime="20180517 14:38:59.512"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -45,12 +45,12 @@
 <assign>
 <var>${json_string}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.736" level="INFO">${json_string} = [{u'username': u'Bret', u'website': u'hildegard.org', u'name': u'Leanne Graham', u'company': {u'bs': u'harness real-time e-markets', u'name': u'Romaguera-Crona', u'catchPhrase': u'Multi-layered client...</msg>
-<status status="PASS" endtime="20180517 14:34:31.736" starttime="20180517 14:34:31.735"></status>
+<msg timestamp="20180517 14:38:59.515" level="INFO">${json_string} = [{u'username': u'Bret', u'website': u'hildegard.org', u'name': u'Leanne Graham', u'company': {u'bs': u'harness real-time e-markets', u'name': u'Romaguera-Crona', u'catchPhrase': u'Multi-layered client...</msg>
+<status status="PASS" endtime="20180517 14:38:59.515" starttime="20180517 14:38:59.514"></status>
 </kw>
 <kw name="Close Browser" library="ExtendedSelenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180517 14:34:31.737" starttime="20180517 14:34:31.737"></status>
+<status status="PASS" endtime="20180517 14:38:59.516" starttime="20180517 14:38:59.516"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -60,16 +60,16 @@
 <assign>
 <var>${item_count}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.737" level="INFO">Length is 10</msg>
-<msg timestamp="20180517 14:34:31.738" level="INFO">${item_count} = 10</msg>
-<status status="PASS" endtime="20180517 14:34:31.738" starttime="20180517 14:34:31.737"></status>
+<msg timestamp="20180517 14:38:59.517" level="INFO">Length is 10</msg>
+<msg timestamp="20180517 14:38:59.517" level="INFO">${item_count} = 10</msg>
+<status status="PASS" endtime="20180517 14:38:59.517" starttime="20180517 14:38:59.516"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>%% Count: ${item_count}</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.738" starttime="20180517 14:34:31.738"></status>
+<status status="PASS" endtime="20180517 14:38:59.519" starttime="20180517 14:38:59.518"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -77,7 +77,7 @@
 <arg>${item_count}</arg>
 <arg>${10}</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.739" starttime="20180517 14:34:31.739"></status>
+<status status="PASS" endtime="20180517 14:38:59.521" starttime="20180517 14:38:59.520"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -88,8 +88,8 @@
 <assign>
 <var>${json}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.742" level="INFO">${json} = [{"username": "Bret", "website": "hildegard.org", "name": "Leanne Graham", "phone": "1-770-736-8031 x56442", "company": {"catchPhrase": "Multi-layered client-server neural-net", "name": "Romaguera-Cro...</msg>
-<status status="PASS" endtime="20180517 14:34:31.742" starttime="20180517 14:34:31.739"></status>
+<msg timestamp="20180517 14:38:59.526" level="INFO">${json} = [{"username": "Bret", "website": "hildegard.org", "name": "Leanne Graham", "phone": "1-770-736-8031 x56442", "company": {"catchPhrase": "Multi-layered client-server neural-net", "name": "Romaguera-Cro...</msg>
+<status status="PASS" endtime="20180517 14:38:59.526" starttime="20180517 14:38:59.522"></status>
 </kw>
 <kw name="Write json result to a file" library="Utility_actions">
 <arguments>
@@ -101,10 +101,10 @@
 <arg>${EXECDIR}/file_with_variable.json</arg>
 <arg>${json_string}</arg>
 </arguments>
-<msg timestamp="20180517 14:34:31.745" html="yes" level="INFO">Created file '&lt;a href="file://C:\Ben\demoqa_registration\Test Cases\Utillity\file_with_variable.json"&gt;C:\Ben\demoqa_registration\Test Cases\Utillity\file_with_variable.json&lt;/a&gt;'.</msg>
-<status status="PASS" endtime="20180517 14:34:31.745" starttime="20180517 14:34:31.743"></status>
+<msg timestamp="20180517 14:38:59.530" html="yes" level="INFO">Created file '&lt;a href="file://C:\Ben\demoqa_registration\Test Cases\Utillity\file_with_variable.json"&gt;C:\Ben\demoqa_registration\Test Cases\Utillity\file_with_variable.json&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180517 14:38:59.530" starttime="20180517 14:38:59.527"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.746" starttime="20180517 14:34:31.742"></status>
+<status status="PASS" endtime="20180517 14:38:59.531" starttime="20180517 14:38:59.526"></status>
 </kw>
 <kw type="for" name="${i} IN RANGE [ 0 | ${item_count} ]">
 <kw type="foritem" name="${i} = 0">
@@ -117,8 +117,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.747" level="INFO">${item} = {u'username': u'Bret', u'website': u'hildegard.org', u'name': u'Leanne Graham', u'company': {u'bs': u'harness real-time e-markets', u'name': u'Romaguera-Crona', u'catchPhrase': u'Multi-layered client-...</msg>
-<status status="PASS" endtime="20180517 14:34:31.747" starttime="20180517 14:34:31.747"></status>
+<msg timestamp="20180517 14:38:59.533" level="INFO">${item} = {u'username': u'Bret', u'website': u'hildegard.org', u'name': u'Leanne Graham', u'company': {u'bs': u'harness real-time e-markets', u'name': u'Romaguera-Crona', u'catchPhrase': u'Multi-layered client-...</msg>
+<status status="PASS" endtime="20180517 14:38:59.533" starttime="20180517 14:38:59.532"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -129,8 +129,8 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.748" level="INFO">${username} = Bret</msg>
-<status status="PASS" endtime="20180517 14:34:31.748" starttime="20180517 14:34:31.747"></status>
+<msg timestamp="20180517 14:38:59.534" level="INFO">${username} = Bret</msg>
+<status status="PASS" endtime="20180517 14:38:59.534" starttime="20180517 14:38:59.533"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -141,8 +141,8 @@
 <assign>
 <var>${name}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.748" level="INFO">${name} = Leanne Graham</msg>
-<status status="PASS" endtime="20180517 14:34:31.749" starttime="20180517 14:34:31.748"></status>
+<msg timestamp="20180517 14:38:59.535" level="INFO">${name} = Leanne Graham</msg>
+<status status="PASS" endtime="20180517 14:38:59.535" starttime="20180517 14:38:59.534"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -153,8 +153,8 @@
 <assign>
 <var>${email}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.749" level="INFO">${email} = Sincere@april.biz</msg>
-<status status="PASS" endtime="20180517 14:34:31.749" starttime="20180517 14:34:31.749"></status>
+<msg timestamp="20180517 14:38:59.537" level="INFO">${email} = Sincere@april.biz</msg>
+<status status="PASS" endtime="20180517 14:38:59.537" starttime="20180517 14:38:59.536"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
@@ -162,9 +162,9 @@
 <arg>| Name: ${name} | email: ${email} | username:</arg>
 <arg>${username} |</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.750" starttime="20180517 14:34:31.749"></status>
+<status status="PASS" endtime="20180517 14:38:59.539" starttime="20180517 14:38:59.537"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.750" starttime="20180517 14:34:31.746"></status>
+<status status="PASS" endtime="20180517 14:38:59.539" starttime="20180517 14:38:59.531"></status>
 </kw>
 <kw type="foritem" name="${i} = 1">
 <kw name="Get From List" library="Collections">
@@ -176,8 +176,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.751" level="INFO">${item} = {u'username': u'Antonette', u'website': u'anastasia.net', u'name': u'Ervin Howell', u'company': {u'bs': u'synergize scalable supply-chains', u'name': u'Deckow-Crist', u'catchPhrase': u'Proactive didac...</msg>
-<status status="PASS" endtime="20180517 14:34:31.751" starttime="20180517 14:34:31.751"></status>
+<msg timestamp="20180517 14:38:59.541" level="INFO">${item} = {u'username': u'Antonette', u'website': u'anastasia.net', u'name': u'Ervin Howell', u'company': {u'bs': u'synergize scalable supply-chains', u'name': u'Deckow-Crist', u'catchPhrase': u'Proactive didac...</msg>
+<status status="PASS" endtime="20180517 14:38:59.541" starttime="20180517 14:38:59.540"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -188,8 +188,8 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.753" level="INFO">${username} = Antonette</msg>
-<status status="PASS" endtime="20180517 14:34:31.753" starttime="20180517 14:34:31.752"></status>
+<msg timestamp="20180517 14:38:59.542" level="INFO">${username} = Antonette</msg>
+<status status="PASS" endtime="20180517 14:38:59.542" starttime="20180517 14:38:59.541"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -200,8 +200,8 @@
 <assign>
 <var>${name}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.754" level="INFO">${name} = Ervin Howell</msg>
-<status status="PASS" endtime="20180517 14:34:31.754" starttime="20180517 14:34:31.754"></status>
+<msg timestamp="20180517 14:38:59.543" level="INFO">${name} = Ervin Howell</msg>
+<status status="PASS" endtime="20180517 14:38:59.543" starttime="20180517 14:38:59.543"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -212,8 +212,8 @@
 <assign>
 <var>${email}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.755" level="INFO">${email} = Shanna@melissa.tv</msg>
-<status status="PASS" endtime="20180517 14:34:31.755" starttime="20180517 14:34:31.754"></status>
+<msg timestamp="20180517 14:38:59.543" level="INFO">${email} = Shanna@melissa.tv</msg>
+<status status="PASS" endtime="20180517 14:38:59.543" starttime="20180517 14:38:59.543"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
@@ -221,9 +221,9 @@
 <arg>| Name: ${name} | email: ${email} | username:</arg>
 <arg>${username} |</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.756" starttime="20180517 14:34:31.755"></status>
+<status status="PASS" endtime="20180517 14:38:59.544" starttime="20180517 14:38:59.544"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.756" starttime="20180517 14:34:31.750"></status>
+<status status="PASS" endtime="20180517 14:38:59.544" starttime="20180517 14:38:59.540"></status>
 </kw>
 <kw type="foritem" name="${i} = 2">
 <kw name="Get From List" library="Collections">
@@ -235,8 +235,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.757" level="INFO">${item} = {u'username': u'Samantha', u'website': u'ramiro.info', u'name': u'Clementine Bauch', u'company': {u'bs': u'e-enable strategic applications', u'name': u'Romaguera-Jacobson', u'catchPhrase': u'Face to f...</msg>
-<status status="PASS" endtime="20180517 14:34:31.757" starttime="20180517 14:34:31.756"></status>
+<msg timestamp="20180517 14:38:59.545" level="INFO">${item} = {u'username': u'Samantha', u'website': u'ramiro.info', u'name': u'Clementine Bauch', u'company': {u'bs': u'e-enable strategic applications', u'name': u'Romaguera-Jacobson', u'catchPhrase': u'Face to f...</msg>
+<status status="PASS" endtime="20180517 14:38:59.545" starttime="20180517 14:38:59.545"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -247,8 +247,8 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.758" level="INFO">${username} = Samantha</msg>
-<status status="PASS" endtime="20180517 14:34:31.758" starttime="20180517 14:34:31.757"></status>
+<msg timestamp="20180517 14:38:59.545" level="INFO">${username} = Samantha</msg>
+<status status="PASS" endtime="20180517 14:38:59.545" starttime="20180517 14:38:59.545"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -259,8 +259,8 @@
 <assign>
 <var>${name}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.759" level="INFO">${name} = Clementine Bauch</msg>
-<status status="PASS" endtime="20180517 14:34:31.759" starttime="20180517 14:34:31.758"></status>
+<msg timestamp="20180517 14:38:59.546" level="INFO">${name} = Clementine Bauch</msg>
+<status status="PASS" endtime="20180517 14:38:59.546" starttime="20180517 14:38:59.545"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -271,8 +271,8 @@
 <assign>
 <var>${email}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.759" level="INFO">${email} = Nathan@yesenia.net</msg>
-<status status="PASS" endtime="20180517 14:34:31.759" starttime="20180517 14:34:31.759"></status>
+<msg timestamp="20180517 14:38:59.546" level="INFO">${email} = Nathan@yesenia.net</msg>
+<status status="PASS" endtime="20180517 14:38:59.546" starttime="20180517 14:38:59.546"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
@@ -280,9 +280,9 @@
 <arg>| Name: ${name} | email: ${email} | username:</arg>
 <arg>${username} |</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.760" starttime="20180517 14:34:31.760"></status>
+<status status="PASS" endtime="20180517 14:38:59.547" starttime="20180517 14:38:59.546"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.760" starttime="20180517 14:34:31.756"></status>
+<status status="PASS" endtime="20180517 14:38:59.547" starttime="20180517 14:38:59.544"></status>
 </kw>
 <kw type="foritem" name="${i} = 3">
 <kw name="Get From List" library="Collections">
@@ -294,8 +294,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.761" level="INFO">${item} = {u'username': u'Karianne', u'website': u'kale.biz', u'name': u'Patricia Lebsack', u'company': {u'bs': u'transition cutting-edge web services', u'name': u'Robel-Corkery', u'catchPhrase': u'Multi-tiered...</msg>
-<status status="PASS" endtime="20180517 14:34:31.761" starttime="20180517 14:34:31.761"></status>
+<msg timestamp="20180517 14:38:59.547" level="INFO">${item} = {u'username': u'Karianne', u'website': u'kale.biz', u'name': u'Patricia Lebsack', u'company': {u'bs': u'transition cutting-edge web services', u'name': u'Robel-Corkery', u'catchPhrase': u'Multi-tiered...</msg>
+<status status="PASS" endtime="20180517 14:38:59.548" starttime="20180517 14:38:59.547"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -306,8 +306,8 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.762" level="INFO">${username} = Karianne</msg>
-<status status="PASS" endtime="20180517 14:34:31.762" starttime="20180517 14:34:31.762"></status>
+<msg timestamp="20180517 14:38:59.548" level="INFO">${username} = Karianne</msg>
+<status status="PASS" endtime="20180517 14:38:59.548" starttime="20180517 14:38:59.548"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -318,8 +318,8 @@
 <assign>
 <var>${name}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.764" level="INFO">${name} = Patricia Lebsack</msg>
-<status status="PASS" endtime="20180517 14:34:31.764" starttime="20180517 14:34:31.762"></status>
+<msg timestamp="20180517 14:38:59.548" level="INFO">${name} = Patricia Lebsack</msg>
+<status status="PASS" endtime="20180517 14:38:59.548" starttime="20180517 14:38:59.548"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -330,8 +330,8 @@
 <assign>
 <var>${email}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.764" level="INFO">${email} = Julianne.OConner@kory.org</msg>
-<status status="PASS" endtime="20180517 14:34:31.764" starttime="20180517 14:34:31.764"></status>
+<msg timestamp="20180517 14:38:59.549" level="INFO">${email} = Julianne.OConner@kory.org</msg>
+<status status="PASS" endtime="20180517 14:38:59.549" starttime="20180517 14:38:59.549"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
@@ -339,9 +339,9 @@
 <arg>| Name: ${name} | email: ${email} | username:</arg>
 <arg>${username} |</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.766" starttime="20180517 14:34:31.765"></status>
+<status status="PASS" endtime="20180517 14:38:59.550" starttime="20180517 14:38:59.549"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.766" starttime="20180517 14:34:31.760"></status>
+<status status="PASS" endtime="20180517 14:38:59.550" starttime="20180517 14:38:59.547"></status>
 </kw>
 <kw type="foritem" name="${i} = 4">
 <kw name="Get From List" library="Collections">
@@ -353,8 +353,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.768" level="INFO">${item} = {u'username': u'Kamren', u'website': u'demarco.info', u'name': u'Chelsey Dietrich', u'company': {u'bs': u'revolutionize end-to-end systems', u'name': u'Keebler LLC', u'catchPhrase': u'User-centric fau...</msg>
-<status status="PASS" endtime="20180517 14:34:31.768" starttime="20180517 14:34:31.767"></status>
+<msg timestamp="20180517 14:38:59.550" level="INFO">${item} = {u'username': u'Kamren', u'website': u'demarco.info', u'name': u'Chelsey Dietrich', u'company': {u'bs': u'revolutionize end-to-end systems', u'name': u'Keebler LLC', u'catchPhrase': u'User-centric fau...</msg>
+<status status="PASS" endtime="20180517 14:38:59.550" starttime="20180517 14:38:59.550"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -365,8 +365,8 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.768" level="INFO">${username} = Kamren</msg>
-<status status="PASS" endtime="20180517 14:34:31.768" starttime="20180517 14:34:31.768"></status>
+<msg timestamp="20180517 14:38:59.551" level="INFO">${username} = Kamren</msg>
+<status status="PASS" endtime="20180517 14:38:59.551" starttime="20180517 14:38:59.550"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -377,8 +377,8 @@
 <assign>
 <var>${name}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.768" level="INFO">${name} = Chelsey Dietrich</msg>
-<status status="PASS" endtime="20180517 14:34:31.769" starttime="20180517 14:34:31.768"></status>
+<msg timestamp="20180517 14:38:59.551" level="INFO">${name} = Chelsey Dietrich</msg>
+<status status="PASS" endtime="20180517 14:38:59.551" starttime="20180517 14:38:59.551"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -389,8 +389,8 @@
 <assign>
 <var>${email}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.769" level="INFO">${email} = Lucio_Hettinger@annie.ca</msg>
-<status status="PASS" endtime="20180517 14:34:31.769" starttime="20180517 14:34:31.769"></status>
+<msg timestamp="20180517 14:38:59.552" level="INFO">${email} = Lucio_Hettinger@annie.ca</msg>
+<status status="PASS" endtime="20180517 14:38:59.552" starttime="20180517 14:38:59.551"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
@@ -398,9 +398,9 @@
 <arg>| Name: ${name} | email: ${email} | username:</arg>
 <arg>${username} |</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.770" starttime="20180517 14:34:31.770"></status>
+<status status="PASS" endtime="20180517 14:38:59.554" starttime="20180517 14:38:59.552"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.771" starttime="20180517 14:34:31.767"></status>
+<status status="PASS" endtime="20180517 14:38:59.554" starttime="20180517 14:38:59.550"></status>
 </kw>
 <kw type="foritem" name="${i} = 5">
 <kw name="Get From List" library="Collections">
@@ -412,8 +412,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.771" level="INFO">${item} = {u'username': u'Leopoldo_Corkery', u'website': u'ola.org', u'name': u'Mrs. Dennis Schulist', u'company': {u'bs': u'e-enable innovative applications', u'name': u'Considine-Lockman', u'catchPhrase': u'S...</msg>
-<status status="PASS" endtime="20180517 14:34:31.772" starttime="20180517 14:34:31.771"></status>
+<msg timestamp="20180517 14:38:59.555" level="INFO">${item} = {u'username': u'Leopoldo_Corkery', u'website': u'ola.org', u'name': u'Mrs. Dennis Schulist', u'company': {u'bs': u'e-enable innovative applications', u'name': u'Considine-Lockman', u'catchPhrase': u'S...</msg>
+<status status="PASS" endtime="20180517 14:38:59.555" starttime="20180517 14:38:59.554"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -424,8 +424,8 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.772" level="INFO">${username} = Leopoldo_Corkery</msg>
-<status status="PASS" endtime="20180517 14:34:31.772" starttime="20180517 14:34:31.772"></status>
+<msg timestamp="20180517 14:38:59.556" level="INFO">${username} = Leopoldo_Corkery</msg>
+<status status="PASS" endtime="20180517 14:38:59.556" starttime="20180517 14:38:59.555"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -436,8 +436,8 @@
 <assign>
 <var>${name}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.773" level="INFO">${name} = Mrs. Dennis Schulist</msg>
-<status status="PASS" endtime="20180517 14:34:31.773" starttime="20180517 14:34:31.773"></status>
+<msg timestamp="20180517 14:38:59.556" level="INFO">${name} = Mrs. Dennis Schulist</msg>
+<status status="PASS" endtime="20180517 14:38:59.556" starttime="20180517 14:38:59.556"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -448,8 +448,8 @@
 <assign>
 <var>${email}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.774" level="INFO">${email} = Karley_Dach@jasper.info</msg>
-<status status="PASS" endtime="20180517 14:34:31.774" starttime="20180517 14:34:31.773"></status>
+<msg timestamp="20180517 14:38:59.557" level="INFO">${email} = Karley_Dach@jasper.info</msg>
+<status status="PASS" endtime="20180517 14:38:59.557" starttime="20180517 14:38:59.557"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
@@ -457,9 +457,9 @@
 <arg>| Name: ${name} | email: ${email} | username:</arg>
 <arg>${username} |</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.775" starttime="20180517 14:34:31.774"></status>
+<status status="PASS" endtime="20180517 14:38:59.558" starttime="20180517 14:38:59.557"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.775" starttime="20180517 14:34:31.771"></status>
+<status status="PASS" endtime="20180517 14:38:59.558" starttime="20180517 14:38:59.554"></status>
 </kw>
 <kw type="foritem" name="${i} = 6">
 <kw name="Get From List" library="Collections">
@@ -471,8 +471,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.776" level="INFO">${item} = {u'username': u'Elwyn.Skiles', u'website': u'elvis.io', u'name': u'Kurtis Weissnat', u'company': {u'bs': u'generate enterprise e-tailers', u'name': u'Johns Group', u'catchPhrase': u'Configurable multi...</msg>
-<status status="PASS" endtime="20180517 14:34:31.776" starttime="20180517 14:34:31.776"></status>
+<msg timestamp="20180517 14:38:59.559" level="INFO">${item} = {u'username': u'Elwyn.Skiles', u'website': u'elvis.io', u'name': u'Kurtis Weissnat', u'company': {u'bs': u'generate enterprise e-tailers', u'name': u'Johns Group', u'catchPhrase': u'Configurable multi...</msg>
+<status status="PASS" endtime="20180517 14:38:59.559" starttime="20180517 14:38:59.558"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -483,8 +483,8 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.777" level="INFO">${username} = Elwyn.Skiles</msg>
-<status status="PASS" endtime="20180517 14:34:31.777" starttime="20180517 14:34:31.776"></status>
+<msg timestamp="20180517 14:38:59.559" level="INFO">${username} = Elwyn.Skiles</msg>
+<status status="PASS" endtime="20180517 14:38:59.559" starttime="20180517 14:38:59.559"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -495,8 +495,8 @@
 <assign>
 <var>${name}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.778" level="INFO">${name} = Kurtis Weissnat</msg>
-<status status="PASS" endtime="20180517 14:34:31.778" starttime="20180517 14:34:31.777"></status>
+<msg timestamp="20180517 14:38:59.560" level="INFO">${name} = Kurtis Weissnat</msg>
+<status status="PASS" endtime="20180517 14:38:59.560" starttime="20180517 14:38:59.559"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -507,8 +507,8 @@
 <assign>
 <var>${email}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.778" level="INFO">${email} = Telly.Hoeger@billy.biz</msg>
-<status status="PASS" endtime="20180517 14:34:31.778" starttime="20180517 14:34:31.778"></status>
+<msg timestamp="20180517 14:38:59.560" level="INFO">${email} = Telly.Hoeger@billy.biz</msg>
+<status status="PASS" endtime="20180517 14:38:59.560" starttime="20180517 14:38:59.560"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
@@ -516,9 +516,9 @@
 <arg>| Name: ${name} | email: ${email} | username:</arg>
 <arg>${username} |</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.780" starttime="20180517 14:34:31.779"></status>
+<status status="PASS" endtime="20180517 14:38:59.561" starttime="20180517 14:38:59.560"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.780" starttime="20180517 14:34:31.775"></status>
+<status status="PASS" endtime="20180517 14:38:59.561" starttime="20180517 14:38:59.558"></status>
 </kw>
 <kw type="foritem" name="${i} = 7">
 <kw name="Get From List" library="Collections">
@@ -530,8 +530,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.781" level="INFO">${item} = {u'username': u'Maxime_Nienow', u'website': u'jacynthe.com', u'name': u'Nicholas Runolfsdottir V', u'company': {u'bs': u'e-enable extensible e-tailers', u'name': u'Abernathy Group', u'catchPhrase': u'...</msg>
-<status status="PASS" endtime="20180517 14:34:31.781" starttime="20180517 14:34:31.780"></status>
+<msg timestamp="20180517 14:38:59.562" level="INFO">${item} = {u'username': u'Maxime_Nienow', u'website': u'jacynthe.com', u'name': u'Nicholas Runolfsdottir V', u'company': {u'bs': u'e-enable extensible e-tailers', u'name': u'Abernathy Group', u'catchPhrase': u'...</msg>
+<status status="PASS" endtime="20180517 14:38:59.562" starttime="20180517 14:38:59.561"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -542,8 +542,8 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.781" level="INFO">${username} = Maxime_Nienow</msg>
-<status status="PASS" endtime="20180517 14:34:31.781" starttime="20180517 14:34:31.781"></status>
+<msg timestamp="20180517 14:38:59.562" level="INFO">${username} = Maxime_Nienow</msg>
+<status status="PASS" endtime="20180517 14:38:59.562" starttime="20180517 14:38:59.562"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -554,8 +554,8 @@
 <assign>
 <var>${name}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.782" level="INFO">${name} = Nicholas Runolfsdottir V</msg>
-<status status="PASS" endtime="20180517 14:34:31.782" starttime="20180517 14:34:31.782"></status>
+<msg timestamp="20180517 14:38:59.563" level="INFO">${name} = Nicholas Runolfsdottir V</msg>
+<status status="PASS" endtime="20180517 14:38:59.563" starttime="20180517 14:38:59.562"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -566,8 +566,8 @@
 <assign>
 <var>${email}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.783" level="INFO">${email} = Sherwood@rosamond.me</msg>
-<status status="PASS" endtime="20180517 14:34:31.783" starttime="20180517 14:34:31.782"></status>
+<msg timestamp="20180517 14:38:59.563" level="INFO">${email} = Sherwood@rosamond.me</msg>
+<status status="PASS" endtime="20180517 14:38:59.563" starttime="20180517 14:38:59.563"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
@@ -575,9 +575,9 @@
 <arg>| Name: ${name} | email: ${email} | username:</arg>
 <arg>${username} |</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.785" starttime="20180517 14:34:31.783"></status>
+<status status="PASS" endtime="20180517 14:38:59.564" starttime="20180517 14:38:59.563"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.785" starttime="20180517 14:34:31.780"></status>
+<status status="PASS" endtime="20180517 14:38:59.564" starttime="20180517 14:38:59.561"></status>
 </kw>
 <kw type="foritem" name="${i} = 8">
 <kw name="Get From List" library="Collections">
@@ -589,8 +589,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.787" level="INFO">${item} = {u'username': u'Delphine', u'website': u'conrad.com', u'name': u'Glenna Reichert', u'company': {u'bs': u'aggregate real-time technologies', u'name': u'Yost and Sons', u'catchPhrase': u'Switchable cont...</msg>
-<status status="PASS" endtime="20180517 14:34:31.787" starttime="20180517 14:34:31.785"></status>
+<msg timestamp="20180517 14:38:59.565" level="INFO">${item} = {u'username': u'Delphine', u'website': u'conrad.com', u'name': u'Glenna Reichert', u'company': {u'bs': u'aggregate real-time technologies', u'name': u'Yost and Sons', u'catchPhrase': u'Switchable cont...</msg>
+<status status="PASS" endtime="20180517 14:38:59.565" starttime="20180517 14:38:59.564"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -601,8 +601,8 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.788" level="INFO">${username} = Delphine</msg>
-<status status="PASS" endtime="20180517 14:34:31.788" starttime="20180517 14:34:31.787"></status>
+<msg timestamp="20180517 14:38:59.565" level="INFO">${username} = Delphine</msg>
+<status status="PASS" endtime="20180517 14:38:59.565" starttime="20180517 14:38:59.565"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -613,8 +613,8 @@
 <assign>
 <var>${name}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.788" level="INFO">${name} = Glenna Reichert</msg>
-<status status="PASS" endtime="20180517 14:34:31.788" starttime="20180517 14:34:31.788"></status>
+<msg timestamp="20180517 14:38:59.566" level="INFO">${name} = Glenna Reichert</msg>
+<status status="PASS" endtime="20180517 14:38:59.566" starttime="20180517 14:38:59.566"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -625,8 +625,8 @@
 <assign>
 <var>${email}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.789" level="INFO">${email} = Chaim_McDermott@dana.io</msg>
-<status status="PASS" endtime="20180517 14:34:31.789" starttime="20180517 14:34:31.788"></status>
+<msg timestamp="20180517 14:38:59.566" level="INFO">${email} = Chaim_McDermott@dana.io</msg>
+<status status="PASS" endtime="20180517 14:38:59.566" starttime="20180517 14:38:59.566"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
@@ -634,9 +634,9 @@
 <arg>| Name: ${name} | email: ${email} | username:</arg>
 <arg>${username} |</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.789" starttime="20180517 14:34:31.789"></status>
+<status status="PASS" endtime="20180517 14:38:59.567" starttime="20180517 14:38:59.566"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.790" starttime="20180517 14:34:31.785"></status>
+<status status="PASS" endtime="20180517 14:38:59.568" starttime="20180517 14:38:59.564"></status>
 </kw>
 <kw type="foritem" name="${i} = 9">
 <kw name="Get From List" library="Collections">
@@ -648,8 +648,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.791" level="INFO">${item} = {u'username': u'Moriah.Stanton', u'website': u'ambrose.net', u'name': u'Clementina DuBuque', u'company': {u'bs': u'target end-to-end models', u'name': u'Hoeger LLC', u'catchPhrase': u'Centralized empo...</msg>
-<status status="PASS" endtime="20180517 14:34:31.791" starttime="20180517 14:34:31.790"></status>
+<msg timestamp="20180517 14:38:59.569" level="INFO">${item} = {u'username': u'Moriah.Stanton', u'website': u'ambrose.net', u'name': u'Clementina DuBuque', u'company': {u'bs': u'target end-to-end models', u'name': u'Hoeger LLC', u'catchPhrase': u'Centralized empo...</msg>
+<status status="PASS" endtime="20180517 14:38:59.569" starttime="20180517 14:38:59.568"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -660,8 +660,8 @@
 <assign>
 <var>${username}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.792" level="INFO">${username} = Moriah.Stanton</msg>
-<status status="PASS" endtime="20180517 14:34:31.792" starttime="20180517 14:34:31.791"></status>
+<msg timestamp="20180517 14:38:59.570" level="INFO">${username} = Moriah.Stanton</msg>
+<status status="PASS" endtime="20180517 14:38:59.570" starttime="20180517 14:38:59.569"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -672,8 +672,8 @@
 <assign>
 <var>${name}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.792" level="INFO">${name} = Clementina DuBuque</msg>
-<status status="PASS" endtime="20180517 14:34:31.792" starttime="20180517 14:34:31.792"></status>
+<msg timestamp="20180517 14:38:59.571" level="INFO">${name} = Clementina DuBuque</msg>
+<status status="PASS" endtime="20180517 14:38:59.572" starttime="20180517 14:38:59.571"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -684,8 +684,8 @@
 <assign>
 <var>${email}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.793" level="INFO">${email} = Rey.Padberg@karina.biz</msg>
-<status status="PASS" endtime="20180517 14:34:31.793" starttime="20180517 14:34:31.793"></status>
+<msg timestamp="20180517 14:38:59.572" level="INFO">${email} = Rey.Padberg@karina.biz</msg>
+<status status="PASS" endtime="20180517 14:38:59.572" starttime="20180517 14:38:59.572"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
@@ -693,15 +693,15 @@
 <arg>| Name: ${name} | email: ${email} | username:</arg>
 <arg>${username} |</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.794" starttime="20180517 14:34:31.793"></status>
+<status status="PASS" endtime="20180517 14:38:59.574" starttime="20180517 14:38:59.573"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.795" starttime="20180517 14:34:31.790"></status>
+<status status="PASS" endtime="20180517 14:38:59.574" starttime="20180517 14:38:59.568"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.795" starttime="20180517 14:34:31.746"></status>
+<status status="PASS" endtime="20180517 14:38:59.574" starttime="20180517 14:38:59.531"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.795" starttime="20180517 14:34:29.725"></status>
+<status status="PASS" endtime="20180517 14:38:59.574" starttime="20180517 14:38:57.750"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.796" critical="yes" starttime="20180517 14:34:29.725"></status>
+<status status="PASS" endtime="20180517 14:38:59.575" critical="yes" starttime="20180517 14:38:57.750"></status>
 </test>
 <test id="s1-t2" name="Read Photos form file">
 <kw name="Read Photos" library="Utility_actions">
@@ -713,15 +713,15 @@
 <assign>
 <var>${posts}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.800" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Ben\demoqa_registration\Test Cases\Utillity\photos.json"&gt;C:\Ben\demoqa_registration\Test Cases\Utillity\photos.json&lt;/a&gt;'.</msg>
-<msg timestamp="20180517 14:34:31.812" level="INFO">${posts} = [
+<msg timestamp="20180517 14:38:59.579" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Ben\demoqa_registration\Test Cases\Utillity\photos.json"&gt;C:\Ben\demoqa_registration\Test Cases\Utillity\photos.json&lt;/a&gt;'.</msg>
+<msg timestamp="20180517 14:38:59.587" level="INFO">${posts} = [
   {
     "albumId": 1,
     "id": 1,
     "title": "accusamus beatae ad facilis cum similique qui sunt",
     "url": "http://placehold.it/600/92c952",
     "thumbnailUrl": "http://placehold.it/150/92c952...</msg>
-<status status="PASS" endtime="20180517 14:34:31.812" starttime="20180517 14:34:31.799"></status>
+<status status="PASS" endtime="20180517 14:38:59.588" starttime="20180517 14:38:59.579"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -732,8 +732,8 @@
 <assign>
 <var>${object}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.889" level="INFO">${object} = [{u'url': u'http://placehold.it/600/92c952', u'albumId': 1, u'thumbnailUrl': u'http://placehold.it/150/92c952', u'id': 1, u'title': u'accusamus beatae ad facilis cum similique qui sunt'}, {u'url': u'h...</msg>
-<status status="PASS" endtime="20180517 14:34:31.889" starttime="20180517 14:34:31.812"></status>
+<msg timestamp="20180517 14:38:59.689" level="INFO">${object} = [{u'url': u'http://placehold.it/600/92c952', u'albumId': 1, u'thumbnailUrl': u'http://placehold.it/150/92c952', u'id': 1, u'title': u'accusamus beatae ad facilis cum similique qui sunt'}, {u'url': u'h...</msg>
+<status status="PASS" endtime="20180517 14:38:59.690" starttime="20180517 14:38:59.588"></status>
 </kw>
 <kw name="Get From List" library="Collections">
 <doc>Returns the value specified with an ``index`` from ``list``.</doc>
@@ -744,8 +744,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.890" level="INFO">${item} = {u'url': u'http://placehold.it/600/92c952', u'albumId': 1, u'thumbnailUrl': u'http://placehold.it/150/92c952', u'id': 1, u'title': u'accusamus beatae ad facilis cum similique qui sunt'}</msg>
-<status status="PASS" endtime="20180517 14:34:31.890" starttime="20180517 14:34:31.890"></status>
+<msg timestamp="20180517 14:38:59.693" level="INFO">${item} = {u'url': u'http://placehold.it/600/92c952', u'albumId': 1, u'thumbnailUrl': u'http://placehold.it/150/92c952', u'id': 1, u'title': u'accusamus beatae ad facilis cum similique qui sunt'}</msg>
+<status status="PASS" endtime="20180517 14:38:59.693" starttime="20180517 14:38:59.691"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -756,19 +756,19 @@
 <assign>
 <var>${title}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.891" level="INFO">${title} = http://placehold.it/600/92c952</msg>
-<status status="PASS" endtime="20180517 14:34:31.891" starttime="20180517 14:34:31.890"></status>
+<msg timestamp="20180517 14:38:59.694" level="INFO">${title} = http://placehold.it/600/92c952</msg>
+<status status="PASS" endtime="20180517 14:38:59.694" starttime="20180517 14:38:59.693"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${title}</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.891" starttime="20180517 14:34:31.891"></status>
+<status status="PASS" endtime="20180517 14:38:59.695" starttime="20180517 14:38:59.694"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.891" starttime="20180517 14:34:31.799"></status>
+<status status="PASS" endtime="20180517 14:38:59.695" starttime="20180517 14:38:59.579"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.892" critical="yes" starttime="20180517 14:34:31.797"></status>
+<status status="PASS" endtime="20180517 14:38:59.696" critical="yes" starttime="20180517 14:38:59.577"></status>
 </test>
 <test id="s1-t3" name="Read Posts form the file">
 <kw name="Read Posts" library="Utility_actions">
@@ -780,14 +780,14 @@
 <assign>
 <var>${posts}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.894" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Ben\demoqa_registration\Test Cases\Utillity\posts.json"&gt;C:\Ben\demoqa_registration\Test Cases\Utillity\posts.json&lt;/a&gt;'.</msg>
-<msg timestamp="20180517 14:34:31.894" level="INFO">${posts} = [
+<msg timestamp="20180517 14:38:59.699" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Ben\demoqa_registration\Test Cases\Utillity\posts.json"&gt;C:\Ben\demoqa_registration\Test Cases\Utillity\posts.json&lt;/a&gt;'.</msg>
+<msg timestamp="20180517 14:38:59.699" level="INFO">${posts} = [
   {
     "userId": 1,
     "id": 1,
     "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
     "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita ...</msg>
-<status status="PASS" endtime="20180517 14:34:31.894" starttime="20180517 14:34:31.893"></status>
+<status status="PASS" endtime="20180517 14:38:59.699" starttime="20180517 14:38:59.698"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -798,8 +798,8 @@
 <assign>
 <var>${object}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.896" level="INFO">${object} = [{u'body': u'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto', u'userId': 1, u'id': 1,...</msg>
-<status status="PASS" endtime="20180517 14:34:31.896" starttime="20180517 14:34:31.895"></status>
+<msg timestamp="20180517 14:38:59.702" level="INFO">${object} = [{u'body': u'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto', u'userId': 1, u'id': 1,...</msg>
+<status status="PASS" endtime="20180517 14:38:59.702" starttime="20180517 14:38:59.700"></status>
 </kw>
 <kw name="Get From List" library="Collections">
 <doc>Returns the value specified with an ``index`` from ``list``.</doc>
@@ -810,8 +810,8 @@
 <assign>
 <var>${item}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.897" level="INFO">${item} = {u'body': u'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto', u'userId': 1, u'id': 1, ...</msg>
-<status status="PASS" endtime="20180517 14:34:31.897" starttime="20180517 14:34:31.896"></status>
+<msg timestamp="20180517 14:38:59.703" level="INFO">${item} = {u'body': u'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto', u'userId': 1, u'id': 1, ...</msg>
+<status status="PASS" endtime="20180517 14:38:59.703" starttime="20180517 14:38:59.702"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -822,19 +822,19 @@
 <assign>
 <var>${title}</var>
 </assign>
-<msg timestamp="20180517 14:34:31.897" level="INFO">${title} = sunt aut facere repellat provident occaecati excepturi optio reprehenderit</msg>
-<status status="PASS" endtime="20180517 14:34:31.897" starttime="20180517 14:34:31.897"></status>
+<msg timestamp="20180517 14:38:59.704" level="INFO">${title} = sunt aut facere repellat provident occaecati excepturi optio reprehenderit</msg>
+<status status="PASS" endtime="20180517 14:38:59.704" starttime="20180517 14:38:59.703"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${title}</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.898" starttime="20180517 14:34:31.897"></status>
+<status status="PASS" endtime="20180517 14:38:59.705" starttime="20180517 14:38:59.704"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.898" starttime="20180517 14:34:31.893"></status>
+<status status="PASS" endtime="20180517 14:38:59.705" starttime="20180517 14:38:59.698"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.898" critical="yes" starttime="20180517 14:34:31.893"></status>
+<status status="PASS" endtime="20180517 14:38:59.706" critical="yes" starttime="20180517 14:38:59.697"></status>
 </test>
 <test id="s1-t4" name="Condition Test">
 <kw name="Show Status" library="Utility_actions">
@@ -849,7 +849,7 @@
 <arguments>
 <arg>Role Selection Test Case</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.900" starttime="20180517 14:34:31.900"></status>
+<status status="PASS" endtime="20180517 14:38:59.712" starttime="20180517 14:38:59.712"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -869,20 +869,20 @@
 <arguments>
 <arg>&lt;Yes&gt;</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.901" starttime="20180517 14:34:31.901"></status>
+<status status="PASS" endtime="20180517 14:38:59.715" starttime="20180517 14:38:59.714"></status>
 </kw>
-<msg timestamp="20180517 14:34:31.901" level="INFO">${Status} = &lt;Yes&gt;</msg>
-<status status="PASS" endtime="20180517 14:34:31.901" starttime="20180517 14:34:31.900"></status>
+<msg timestamp="20180517 14:38:59.715" level="INFO">${Status} = &lt;Yes&gt;</msg>
+<status status="PASS" endtime="20180517 14:38:59.715" starttime="20180517 14:38:59.713"></status>
 </kw>
-<msg timestamp="20180517 14:34:31.901" level="INFO">${status} = &lt;Yes&gt;</msg>
-<status status="PASS" endtime="20180517 14:34:31.901" starttime="20180517 14:34:31.900"></status>
+<msg timestamp="20180517 14:38:59.716" level="INFO">${status} = &lt;Yes&gt;</msg>
+<status status="PASS" endtime="20180517 14:38:59.716" starttime="20180517 14:38:59.710"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>::::${status}</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.902" starttime="20180517 14:34:31.902"></status>
+<status status="PASS" endtime="20180517 14:38:59.719" starttime="20180517 14:38:59.717"></status>
 </kw>
 <kw name="Show Status" library="Utility_actions">
 <arguments>
@@ -896,7 +896,7 @@
 <arguments>
 <arg>Role Selection Test Case</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.903" starttime="20180517 14:34:31.903"></status>
+<status status="PASS" endtime="20180517 14:38:59.723" starttime="20180517 14:38:59.721"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -916,24 +916,24 @@
 <arguments>
 <arg>&lt;No&gt;</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.904" starttime="20180517 14:34:31.904"></status>
+<status status="PASS" endtime="20180517 14:38:59.726" starttime="20180517 14:38:59.725"></status>
 </kw>
-<msg timestamp="20180517 14:34:31.904" level="INFO">${Status} = &lt;No&gt;</msg>
-<status status="PASS" endtime="20180517 14:34:31.904" starttime="20180517 14:34:31.903"></status>
+<msg timestamp="20180517 14:38:59.726" level="INFO">${Status} = &lt;No&gt;</msg>
+<status status="PASS" endtime="20180517 14:38:59.727" starttime="20180517 14:38:59.724"></status>
 </kw>
-<msg timestamp="20180517 14:34:31.904" level="INFO">${status} = &lt;No&gt;</msg>
-<status status="PASS" endtime="20180517 14:34:31.904" starttime="20180517 14:34:31.902"></status>
+<msg timestamp="20180517 14:38:59.727" level="INFO">${status} = &lt;No&gt;</msg>
+<status status="PASS" endtime="20180517 14:38:59.727" starttime="20180517 14:38:59.720"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>::::${status}</arg>
 </arguments>
-<status status="PASS" endtime="20180517 14:34:31.905" starttime="20180517 14:34:31.905"></status>
+<status status="PASS" endtime="20180517 14:38:59.729" starttime="20180517 14:38:59.728"></status>
 </kw>
-<status status="PASS" endtime="20180517 14:34:31.905" critical="yes" starttime="20180517 14:34:31.899"></status>
+<status status="PASS" endtime="20180517 14:38:59.729" critical="yes" starttime="20180517 14:38:59.709"></status>
 </test>
-<status status="PASS" endtime="20180517 14:34:31.906" starttime="20180517 14:34:29.302"></status>
+<status status="PASS" endtime="20180517 14:38:59.732" starttime="20180517 14:38:57.341"></status>
 </suite>
 <statistics>
 <total>
