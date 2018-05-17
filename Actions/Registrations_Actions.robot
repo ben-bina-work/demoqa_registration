@@ -17,3 +17,4 @@ When user enters details
 Then join successful
     Log    To be Implemented
     Close Browser
+

@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180517 12:24:27.151" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<suite source="C:\Ben\demoqa_registration\Test Cases\Utillity\RestWebservices.robot" id="s1" name="RestWebservices">
+<test id="s1-t1" name="Read Rest API">
+<kw name="Read Users From API" library="Utility_actions">
+<kw name="Get" library="requests">
+<doc>Sends a GET request.</doc>
+<arguments>
+<arg>${rest_url}/users</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.843" level="INFO">${result} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180517 12:24:29.843" starttime="20180517 12:24:27.576"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${result.status_code}</arg>
+<arg>${200}</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.844" starttime="20180517 12:24:29.843"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Status Code: ${result.status_code}</arg>
+</arguments>
+<msg timestamp="20180517 12:24:29.845" level="INFO">Status Code: 200</msg>
+<status status="PASS" endtime="20180517 12:24:29.845" starttime="20180517 12:24:29.845"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Status Code: ${result.status_code}</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.847" starttime="20180517 12:24:29.846"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${result.json()}</arg>
+</arguments>
+<assign>
+<var>${json_string}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.848" level="INFO">${json_string} = [{u'username': u'Bret', u'website': u'hildegard.org', u'name': u'Leanne Graham', u'company': {u'bs': u'harness real-time e-markets', u'name': u'Romaguera-Crona', u'catchPhrase': u'Multi-layered client...</msg>
+<status status="PASS" endtime="20180517 12:24:29.848" starttime="20180517 12:24:29.847"></status>
+</kw>
+<kw name="Close Browser" library="ExtendedSelenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180517 12:24:29.849" starttime="20180517 12:24:29.849"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${json_string}</arg>
+</arguments>
+<assign>
+<var>${item_count}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.850" level="INFO">Length is 10</msg>
+<msg timestamp="20180517 12:24:29.850" level="INFO">${item_count} = 10</msg>
+<status status="PASS" endtime="20180517 12:24:29.850" starttime="20180517 12:24:29.849"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>%% Count: ${item_count}</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.852" starttime="20180517 12:24:29.850"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${item_count}</arg>
+<arg>${10}</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.853" starttime="20180517 12:24:29.852"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>json.dumps(${json_string})</arg>
+<arg>json</arg>
+</arguments>
+<assign>
+<var>${json}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.856" level="INFO">${json} = [{"username": "Bret", "website": "hildegard.org", "name": "Leanne Graham", "phone": "1-770-736-8031 x56442", "company": {"catchPhrase": "Multi-layered client-server neural-net", "name": "Romaguera-Cro...</msg>
+<status status="PASS" endtime="20180517 12:24:29.856" starttime="20180517 12:24:29.853"></status>
+</kw>
+<kw name="Write json result to a file" library="Utility_actions">
+<arguments>
+<arg>${json}</arg>
+</arguments>
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${EXECDIR}/file_with_variable.json</arg>
+<arg>${json_string}</arg>
+</arguments>
+<msg timestamp="20180517 12:24:29.859" html="yes" level="INFO">Created file '&lt;a href="file://C:\Ben\demoqa_registration\Test Cases\Utillity\file_with_variable.json"&gt;C:\Ben\demoqa_registration\Test Cases\Utillity\file_with_variable.json&lt;/a&gt;'.</msg>
+<status status="PASS" endtime="20180517 12:24:29.859" starttime="20180517 12:24:29.857"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.859" starttime="20180517 12:24:29.856"></status>
+</kw>
+<kw type="for" name="${i} IN RANGE [ 0 | ${item_count} ]">
+<kw type="foritem" name="${i} = 0">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${json_string}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.863" level="INFO">${item} = {u'username': u'Bret', u'website': u'hildegard.org', u'name': u'Leanne Graham', u'company': {u'bs': u'harness real-time e-markets', u'name': u'Romaguera-Crona', u'catchPhrase': u'Multi-layered client-...</msg>
+<status status="PASS" endtime="20180517 12:24:29.863" starttime="20180517 12:24:29.862"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.864" level="INFO">${username} = Bret</msg>
+<status status="PASS" endtime="20180517 12:24:29.864" starttime="20180517 12:24:29.863"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.864" level="INFO">${name} = Leanne Graham</msg>
+<status status="PASS" endtime="20180517 12:24:29.864" starttime="20180517 12:24:29.864"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.865" level="INFO">${email} = Sincere@april.biz</msg>
+<status status="PASS" endtime="20180517 12:24:29.865" starttime="20180517 12:24:29.865"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>| Name: ${name} | email: ${email} | username:</arg>
+<arg>${username} |</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.867" starttime="20180517 12:24:29.865"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.867" starttime="20180517 12:24:29.862"></status>
+</kw>
+<kw type="foritem" name="${i} = 1">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${json_string}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.868" level="INFO">${item} = {u'username': u'Antonette', u'website': u'anastasia.net', u'name': u'Ervin Howell', u'company': {u'bs': u'synergize scalable supply-chains', u'name': u'Deckow-Crist', u'catchPhrase': u'Proactive didac...</msg>
+<status status="PASS" endtime="20180517 12:24:29.868" starttime="20180517 12:24:29.867"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.869" level="INFO">${username} = Antonette</msg>
+<status status="PASS" endtime="20180517 12:24:29.869" starttime="20180517 12:24:29.868"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.870" level="INFO">${name} = Ervin Howell</msg>
+<status status="PASS" endtime="20180517 12:24:29.870" starttime="20180517 12:24:29.869"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.871" level="INFO">${email} = Shanna@melissa.tv</msg>
+<status status="PASS" endtime="20180517 12:24:29.871" starttime="20180517 12:24:29.870"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>| Name: ${name} | email: ${email} | username:</arg>
+<arg>${username} |</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.872" starttime="20180517 12:24:29.871"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.872" starttime="20180517 12:24:29.867"></status>
+</kw>
+<kw type="foritem" name="${i} = 2">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${json_string}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.873" level="INFO">${item} = {u'username': u'Samantha', u'website': u'ramiro.info', u'name': u'Clementine Bauch', u'company': {u'bs': u'e-enable strategic applications', u'name': u'Romaguera-Jacobson', u'catchPhrase': u'Face to f...</msg>
+<status status="PASS" endtime="20180517 12:24:29.873" starttime="20180517 12:24:29.872"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.874" level="INFO">${username} = Samantha</msg>
+<status status="PASS" endtime="20180517 12:24:29.874" starttime="20180517 12:24:29.873"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.874" level="INFO">${name} = Clementine Bauch</msg>
+<status status="PASS" endtime="20180517 12:24:29.874" starttime="20180517 12:24:29.874"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.874" level="INFO">${email} = Nathan@yesenia.net</msg>
+<status status="PASS" endtime="20180517 12:24:29.874" starttime="20180517 12:24:29.874"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>| Name: ${name} | email: ${email} | username:</arg>
+<arg>${username} |</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.876" starttime="20180517 12:24:29.875"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.876" starttime="20180517 12:24:29.872"></status>
+</kw>
+<kw type="foritem" name="${i} = 3">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${json_string}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.876" level="INFO">${item} = {u'username': u'Karianne', u'website': u'kale.biz', u'name': u'Patricia Lebsack', u'company': {u'bs': u'transition cutting-edge web services', u'name': u'Robel-Corkery', u'catchPhrase': u'Multi-tiered...</msg>
+<status status="PASS" endtime="20180517 12:24:29.877" starttime="20180517 12:24:29.876"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.877" level="INFO">${username} = Karianne</msg>
+<status status="PASS" endtime="20180517 12:24:29.877" starttime="20180517 12:24:29.877"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.877" level="INFO">${name} = Patricia Lebsack</msg>
+<status status="PASS" endtime="20180517 12:24:29.877" starttime="20180517 12:24:29.877"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.878" level="INFO">${email} = Julianne.OConner@kory.org</msg>
+<status status="PASS" endtime="20180517 12:24:29.878" starttime="20180517 12:24:29.878"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>| Name: ${name} | email: ${email} | username:</arg>
+<arg>${username} |</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.879" starttime="20180517 12:24:29.878"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.879" starttime="20180517 12:24:29.876"></status>
+</kw>
+<kw type="foritem" name="${i} = 4">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${json_string}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.879" level="INFO">${item} = {u'username': u'Kamren', u'website': u'demarco.info', u'name': u'Chelsey Dietrich', u'company': {u'bs': u'revolutionize end-to-end systems', u'name': u'Keebler LLC', u'catchPhrase': u'User-centric fau...</msg>
+<status status="PASS" endtime="20180517 12:24:29.879" starttime="20180517 12:24:29.879"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.880" level="INFO">${username} = Kamren</msg>
+<status status="PASS" endtime="20180517 12:24:29.880" starttime="20180517 12:24:29.880"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.880" level="INFO">${name} = Chelsey Dietrich</msg>
+<status status="PASS" endtime="20180517 12:24:29.880" starttime="20180517 12:24:29.880"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.881" level="INFO">${email} = Lucio_Hettinger@annie.ca</msg>
+<status status="PASS" endtime="20180517 12:24:29.881" starttime="20180517 12:24:29.880"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>| Name: ${name} | email: ${email} | username:</arg>
+<arg>${username} |</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.882" starttime="20180517 12:24:29.881"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.882" starttime="20180517 12:24:29.879"></status>
+</kw>
+<kw type="foritem" name="${i} = 5">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${json_string}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.883" level="INFO">${item} = {u'username': u'Leopoldo_Corkery', u'website': u'ola.org', u'name': u'Mrs. Dennis Schulist', u'company': {u'bs': u'e-enable innovative applications', u'name': u'Considine-Lockman', u'catchPhrase': u'S...</msg>
+<status status="PASS" endtime="20180517 12:24:29.883" starttime="20180517 12:24:29.882"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.883" level="INFO">${username} = Leopoldo_Corkery</msg>
+<status status="PASS" endtime="20180517 12:24:29.883" starttime="20180517 12:24:29.883"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.883" level="INFO">${name} = Mrs. Dennis Schulist</msg>
+<status status="PASS" endtime="20180517 12:24:29.883" starttime="20180517 12:24:29.883"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.884" level="INFO">${email} = Karley_Dach@jasper.info</msg>
+<status status="PASS" endtime="20180517 12:24:29.884" starttime="20180517 12:24:29.884"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>| Name: ${name} | email: ${email} | username:</arg>
+<arg>${username} |</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.885" starttime="20180517 12:24:29.884"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.885" starttime="20180517 12:24:29.882"></status>
+</kw>
+<kw type="foritem" name="${i} = 6">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${json_string}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.886" level="INFO">${item} = {u'username': u'Elwyn.Skiles', u'website': u'elvis.io', u'name': u'Kurtis Weissnat', u'company': {u'bs': u'generate enterprise e-tailers', u'name': u'Johns Group', u'catchPhrase': u'Configurable multi...</msg>
+<status status="PASS" endtime="20180517 12:24:29.886" starttime="20180517 12:24:29.885"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.886" level="INFO">${username} = Elwyn.Skiles</msg>
+<status status="PASS" endtime="20180517 12:24:29.886" starttime="20180517 12:24:29.886"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.886" level="INFO">${name} = Kurtis Weissnat</msg>
+<status status="PASS" endtime="20180517 12:24:29.886" starttime="20180517 12:24:29.886"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.887" level="INFO">${email} = Telly.Hoeger@billy.biz</msg>
+<status status="PASS" endtime="20180517 12:24:29.887" starttime="20180517 12:24:29.887"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>| Name: ${name} | email: ${email} | username:</arg>
+<arg>${username} |</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.888" starttime="20180517 12:24:29.887"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.888" starttime="20180517 12:24:29.885"></status>
+</kw>
+<kw type="foritem" name="${i} = 7">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${json_string}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.888" level="INFO">${item} = {u'username': u'Maxime_Nienow', u'website': u'jacynthe.com', u'name': u'Nicholas Runolfsdottir V', u'company': {u'bs': u'e-enable extensible e-tailers', u'name': u'Abernathy Group', u'catchPhrase': u'...</msg>
+<status status="PASS" endtime="20180517 12:24:29.889" starttime="20180517 12:24:29.888"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.889" level="INFO">${username} = Maxime_Nienow</msg>
+<status status="PASS" endtime="20180517 12:24:29.889" starttime="20180517 12:24:29.889"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.890" level="INFO">${name} = Nicholas Runolfsdottir V</msg>
+<status status="PASS" endtime="20180517 12:24:29.890" starttime="20180517 12:24:29.889"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.890" level="INFO">${email} = Sherwood@rosamond.me</msg>
+<status status="PASS" endtime="20180517 12:24:29.890" starttime="20180517 12:24:29.890"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>| Name: ${name} | email: ${email} | username:</arg>
+<arg>${username} |</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.891" starttime="20180517 12:24:29.890"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.891" starttime="20180517 12:24:29.888"></status>
+</kw>
+<kw type="foritem" name="${i} = 8">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${json_string}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.892" level="INFO">${item} = {u'username': u'Delphine', u'website': u'conrad.com', u'name': u'Glenna Reichert', u'company': {u'bs': u'aggregate real-time technologies', u'name': u'Yost and Sons', u'catchPhrase': u'Switchable cont...</msg>
+<status status="PASS" endtime="20180517 12:24:29.892" starttime="20180517 12:24:29.891"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.892" level="INFO">${username} = Delphine</msg>
+<status status="PASS" endtime="20180517 12:24:29.892" starttime="20180517 12:24:29.892"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.893" level="INFO">${name} = Glenna Reichert</msg>
+<status status="PASS" endtime="20180517 12:24:29.893" starttime="20180517 12:24:29.892"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.893" level="INFO">${email} = Chaim_McDermott@dana.io</msg>
+<status status="PASS" endtime="20180517 12:24:29.893" starttime="20180517 12:24:29.893"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>| Name: ${name} | email: ${email} | username:</arg>
+<arg>${username} |</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.894" starttime="20180517 12:24:29.893"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.894" starttime="20180517 12:24:29.891"></status>
+</kw>
+<kw type="foritem" name="${i} = 9">
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${json_string}</arg>
+<arg>${i}</arg>
+</arguments>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.895" level="INFO">${item} = {u'username': u'Moriah.Stanton', u'website': u'ambrose.net', u'name': u'Clementina DuBuque', u'company': {u'bs': u'target end-to-end models', u'name': u'Hoeger LLC', u'catchPhrase': u'Centralized empo...</msg>
+<status status="PASS" endtime="20180517 12:24:29.895" starttime="20180517 12:24:29.894"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.896" level="INFO">${username} = Moriah.Stanton</msg>
+<status status="PASS" endtime="20180517 12:24:29.896" starttime="20180517 12:24:29.895"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${name}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.897" level="INFO">${name} = Clementina DuBuque</msg>
+<status status="PASS" endtime="20180517 12:24:29.897" starttime="20180517 12:24:29.896"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${item}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20180517 12:24:29.897" level="INFO">${email} = Rey.Padberg@karina.biz</msg>
+<status status="PASS" endtime="20180517 12:24:29.897" starttime="20180517 12:24:29.897"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>| Name: ${name} | email: ${email} | username:</arg>
+<arg>${username} |</arg>
+</arguments>
+<status status="PASS" endtime="20180517 12:24:29.898" starttime="20180517 12:24:29.898"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.898" starttime="20180517 12:24:29.894"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.899" starttime="20180517 12:24:29.859"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.899" starttime="20180517 12:24:27.575"></status>
+</kw>
+<status status="PASS" endtime="20180517 12:24:29.914" critical="yes" starttime="20180517 12:24:27.575"></status>
+</test>
+<status status="PASS" endtime="20180517 12:24:29.921" starttime="20180517 12:24:27.154"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="RestWebservices" pass="1">RestWebservices</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
