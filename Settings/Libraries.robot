@@ -6,7 +6,6 @@ Library           OperatingSystem
 Library           String
 Library           Collections
 Library           DateTime
-Library           Collections
 Library           requests
 
 *** Variables ***

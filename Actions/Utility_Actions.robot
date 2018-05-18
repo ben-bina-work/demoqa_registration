@@ -56,6 +56,7 @@ Read Posts
     ${item}=    Get From List   ${object}      ${0}
     ${title} =  Get From Dictionary  ${item}  title
     Log To Console      ${title}
+
 Read Photos
     ${posts}=   Get Binary File    ${EXECDIR}/Test Cases/Utillity/photos.json   
     ${object}=  Evaluate  json.loads('''${posts}''',strict=False)   json
@@ -67,6 +68,7 @@ Open API Endpoint
     Open Browser    about:blank    chrome
     Maximize Browser Window
     Go To    ${rest_url}
+    
 Send Request
     ${result}=      get     ${rest_url}
     Should Be Equal  ${result.status_code}  ${200}
