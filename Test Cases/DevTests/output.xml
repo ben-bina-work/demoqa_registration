@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180521 16:40:22.411" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<suite source="c:\Ben\demoqa_registration\Test Cases\DevTests\GherkinDataTable.robot" id="s1" name="GherkinDataTable">
+<test id="s1-t1" name="Templated test case">
+<kw name="Example keyword">
+<arguments>
+<arg>"First Agument"</arg>
+<arg>"Second Argument"</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${a}-${b}</arg>
+</arguments>
+<status status="PASS" endtime="20180521 16:40:22.437" starttime="20180521 16:40:22.436"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.437" starttime="20180521 16:40:22.435"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.437" critical="yes" starttime="20180521 16:40:22.435"></status>
+</test>
+<test id="s1-t2" name="TDD Gherkin">
+<kw name="I canot login with invalid credentials">
+<arguments>
+<arg>"Ben"</arg>
+<arg>"Bina"</arg>
+</arguments>
+<kw name="Given I have userName">
+<arguments>
+<arg>${userName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>My User: ${userName}</arg>
+</arguments>
+<status status="PASS" endtime="20180521 16:40:22.440" starttime="20180521 16:40:22.440"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.440" starttime="20180521 16:40:22.439"></status>
+</kw>
+<kw name="And I have password">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>My password: ${password}</arg>
+</arguments>
+<status status="PASS" endtime="20180521 16:40:22.442" starttime="20180521 16:40:22.441"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.442" starttime="20180521 16:40:22.441"></status>
+</kw>
+<kw name="Then join unsuccessful">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>unsuccessful</arg>
+</arguments>
+<status status="PASS" endtime="20180521 16:40:22.443" starttime="20180521 16:40:22.442"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.443" starttime="20180521 16:40:22.442"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.443" starttime="20180521 16:40:22.439"></status>
+</kw>
+<kw name="I canot login with invalid credentials">
+<arguments>
+<arg>"Mark"</arg>
+<arg>"Anthony"</arg>
+</arguments>
+<kw name="Given I have userName">
+<arguments>
+<arg>${userName}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>My User: ${userName}</arg>
+</arguments>
+<status status="PASS" endtime="20180521 16:40:22.445" starttime="20180521 16:40:22.444"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.445" starttime="20180521 16:40:22.444"></status>
+</kw>
+<kw name="And I have password">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>My password: ${password}</arg>
+</arguments>
+<status status="PASS" endtime="20180521 16:40:22.446" starttime="20180521 16:40:22.445"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.446" starttime="20180521 16:40:22.445"></status>
+</kw>
+<kw name="Then join unsuccessful">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>unsuccessful</arg>
+</arguments>
+<status status="PASS" endtime="20180521 16:40:22.447" starttime="20180521 16:40:22.447"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.448" starttime="20180521 16:40:22.447"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.448" starttime="20180521 16:40:22.443"></status>
+</kw>
+<status status="PASS" endtime="20180521 16:40:22.448" critical="yes" starttime="20180521 16:40:22.438"></status>
+</test>
+<status status="PASS" endtime="20180521 16:40:22.450" starttime="20180521 16:40:22.414"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="GherkinDataTable" pass="2">GherkinDataTable</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
